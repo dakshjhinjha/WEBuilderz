@@ -248,9 +248,10 @@ li::marker{
 }
 .footerp{
   color: rgb(196, 195, 195);
+  margin-bottom: 0;
 }
 .content{
-  padding-top: 40px;
+  padding-top: 20px;
   padding-bottom: 20px;
 }
 .footer{
@@ -260,18 +261,27 @@ li::marker{
 
 
 .contacthead{
-  color: #1f286eff;
-  margin-bottom: 50px;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  
+  
 }
 
 .contactp{
   
-    font-size: 23px;
+    font-size: 18px;
+    margin-bottom: 0;
     
     color: rgb(158, 157, 157);
    
    
 
+}
+
+.contactsection{
+  background-color: #1f286eff;
+  padding-bottom: 30px;
 }
   @media (max-width: 992px) {
 
@@ -297,4 +307,11 @@ li::marker{
       display: flex;
       flex-direction: column-reverse;
     }
+
+    .contactp{
+      font-size: 15px;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+
   }
