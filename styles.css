@@ -1,22 +1,20 @@
 
 body {
     text-align: center;
+    background-color: #748bfaff;
   }
 
-  hr{
-    width: 60%;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    border: solid rgb(160, 159, 159) 1px;
-  }
   
+
+  /* ----------navigation-------------- */
+
   .top-section {
     background-color: #4a69f8ff;
     
   }
   .container-fluid{
     padding: 7% 10%;
-    max-width: 2000px;
+    max-width: 1900px;
   }
 
   .logo{
@@ -36,35 +34,74 @@ body {
   .nav-item {
     padding: 0 18px;
   }
+  .nav-link{
+    color: white !important;
+  }
+  
+  .socials{
+    padding: 0 5px;
+  }
+  .social1{
+    padding-left:15px;
+    color: white;
+  }
+  
   
   .nav-link {
     font-size: 1.1rem;
     font-weight: lighter;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: inline-block;
+  position: relative;
+  color: white;
   }
 
+  .nav-link:after{
+    content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+  
+  }
+
+  .nav-link:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
   /* Buttons */
 
 .download-button {
-    margin: 5% 3% 5% 0;
+    margin: 2% 3% 2% 0;
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left: 20px;
+    padding-right: 20px;
     background-color: #4a69f8ff;
     color: white;
-    border-radius: 0px;
-    border-bottom: solid rgb(202, 202, 202) 0.5px;
-    border-right: solid rgb(202, 202, 202) 0.5px;
-    border-top: solid #1f286eff 5px;
-    border-left: solid #1f286eff 5px;
+    font-weight: 800;
+    border-radius: 20px;
+    border: 1px solid white;
+    
   }
 
   .download-button:hover {
-    margin: 5% 3% 5% 0;
-    background-color: rgb(196, 195, 195);
-    color: #1f286eff;
-    border-radius: 0px;
-    border-bottom: solid rgb(202, 202, 202) 0.5px;
-    border-right: solid rgb(202, 202, 202) 0.5px;
-    border-top: solid #1f286eff 5px;
-    border-left: solid #1f286eff 5px;
+    margin: 2% 3% 2% 0;
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: white;
+    color:#1f286eff ;
+    font-weight: 800;
+    border-radius: 20px;
+    border: 1px solid white;
+    
   }
   
   /* Title Section */
@@ -76,9 +113,17 @@ body {
   }
   
   #title .container-fluid {
-    padding: 3% 10% 7%;
+    padding: 3% 10% 5%;
   }
-  
+
+  .computer_illustration{
+    width: auto;
+    height: auto;
+    max-width: 556px;
+  }
+  .illustration_main{
+    text-align: right;
+  }
   /* Title Image */
   
   .title-image {
@@ -91,9 +136,9 @@ body {
   .big-heading {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 2.5rem;
-    line-height: 1.5;
+    line-height: 1.3;
     color: #1f286eff;
-    font-weight: bolder;
+    font-weight: 900;
 
   }
   .foryou{
@@ -101,193 +146,776 @@ body {
   }
   .intro{
       z-index: 10;
-      color: rgb(196, 195, 195);
+      color: white;
+      padding-top: 2%;
+      line-height: 1.6;
+      
   }
-  .col-lg-7{
-      padding-right: 70px;
+  
+
+/* ---------------main_animation------------------ */
+
+.logo_circle{
+  
+    
+    stroke: #ffffff00;
+    animation-name: logocirc;
+    animation-duration: 0.7s;
+    animation-delay: 5.6s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
   }
-.whatwedo{
+  @keyframes logocirc {
+    from {stroke: #ffffff00;}
+    to { stroke: white;}
+  
+  } 
+
+.heading_line{
+  fill: #ffffff00;
+  stroke: #ffffff00;
+    animation-name: mainhead;
+    animation-duration: 1.2s;
+    animation-delay: 5.6s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes mainhead{
+    from {fill: #ffffff00; stroke: #ffffff00; transform: translateX(-12px);}
+    to {fill: white; stroke: white; transform: translateX(0px);}
+}
+.subheading_line{
+  
+  stroke: #ffffff00;
+    animation-name: subhead;
+    animation-duration: 1.2s;
+    animation-delay: 5.6s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes subhead{
+    from { stroke: #ffffff00; transform: translateX(-12px);}
+    to {stroke: white; transform: translateX(0px);}
+}
+.button_box{
+  stroke: #ffffff00;
+    animation-name: button;
+    animation-duration: 1.2s;
+    animation-delay: 5.6s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes button{
+    from { stroke: #ffffff00; transform: translateX(-12px);}
+    to {stroke: white; transform: translateX(0px);}
+}
+.nav_line{
+  stroke: #ffffff00;
+    animation-name: navline;
+    animation-duration: 0.7s;
+    animation-delay: 5.6s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes navline {
+    from {stroke: #ffffff00;}
+    to { stroke: white;}
+}
+.pic_box{
+  stroke: #ffffff00;
+    animation-name: pic;
+    animation-duration: 1.2s;
+    animation-delay: 5.6s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes pic{
+    from { stroke: #ffffff00; transform: translateX(12px);}
+    to {stroke: white; transform: translateX(0px);}
+}
+
+.cdln1{
+  animation: datapacket1 0.4s infinite !important;
+  animation-delay: 1.5s !important;
+  animation-timing-function: linear !important;
+  animation-iteration-count: 1 !important;
+  animation-fill-mode: both !important;
+}
+@keyframes datapacket1 {
+  
+  100% {transform: translateX(30px);}
+  
+    }
+    .cdln2{
+      animation: datapacket2 0.4s infinite !important;
+      animation-delay: 1.9s !important;
+      animation-timing-function: linear !important;
+      animation-iteration-count: 1 !important;
+      animation-fill-mode: both !important;
+    }
+    @keyframes datapacket2 {
+      
+      100% {transform: translateX(65px);}
+      
+        }
+        .cdln3{
+          animation: datapacket3 0.4s infinite !important;
+          animation-delay: 2.3s !important;
+          animation-timing-function: linear !important;
+          animation-iteration-count: 1 !important;
+          animation-fill-mode: both !important;
+        }
+        @keyframes datapacket3 {
+          
+          100% {transform: translateX(50px);}
+          
+            }
+            .cdln4{
+              animation: datapacket4 0.4s infinite !important;
+              animation-delay: 2.7s !important;
+              animation-timing-function: linear !important;
+              animation-iteration-count: 1 !important;
+              animation-fill-mode: both !important;
+            }
+            @keyframes datapacket4 {
+              
+              100% {transform: translateX(80px);}
+              
+                }
+                .cdln5{
+                  animation: datapacket5 0.4s infinite !important;
+                  animation-delay: 3.1s !important;
+                  animation-timing-function: linear !important;
+                  animation-iteration-count: 1 !important;
+                  animation-fill-mode: both !important;
+                }
+                @keyframes datapacket5 {
+                  
+                  100% {transform: translateX(80px);}
+                  
+                    }
+                    .cdln6{
+                      animation: datapacket6 0.4s infinite !important;
+                      animation-delay: 3.5s !important;
+                      animation-timing-function: linear !important;
+                      animation-iteration-count: 1 !important;
+                      animation-fill-mode: both !important;
+                    }
+                    @keyframes datapacket6 {
+                      
+                      100% {transform: translateX(100px);}
+                      
+                        }
+                        .cdln7{
+                          animation: datapacket7 0.4s infinite !important;
+                          animation-delay: 3.9s !important;
+                          animation-timing-function: linear !important;
+                          animation-iteration-count: 1 !important;
+                          animation-fill-mode: both !important;
+                        }
+                        @keyframes datapacket7 {
+                          
+                          100% {transform: translateX(70px);}
+                          
+                            }
+                            .cdln8{
+                              animation: datapacket8 0.4s infinite !important;
+                              animation-delay: 4.3s !important;
+                              animation-timing-function: linear !important;
+                              animation-iteration-count: 1 !important;
+                              animation-fill-mode: both !important;
+                            }
+                            @keyframes datapacket8 {
+                              
+                              100% {transform: translateX(100px);}
+                              
+                                }
+                                .cdln9{
+                                  animation: datapacket9 0.4s infinite !important;
+                                  animation-delay: 4.7s !important;
+                                  animation-timing-function: linear !important;
+                                  animation-iteration-count: 1 !important;
+                                  animation-fill-mode: both !important;
+                                }
+                                @keyframes datapacket9 {
+                                  
+                                  100% {transform: translateX(30px);}
+                                  
+                                    }
+                                    .cdnone{
+                                      fill: #b3b3b3;
+                                      stroke: #b3b3b3;
+                                      animation-name: justfu5;
+                                      animation-duration: 0.4s;
+                                      animation-delay: 5s;
+                                      animation-iteration-count: 1;
+                                      animation-fill-mode: forwards;
+                                    }
+                                    @keyframes justfu5 {
+                                      from {fill: #b3b3b3;stroke: #b3b3b3;}
+                                      to {fill: #ffffff00; stroke: #ffffff00;}
+                                    
+                                    }          
+
+                                    .cdnonecover{
+                                      
+                                      animation-name: justfu4;
+                                      animation-duration: 0.4s;
+                                      animation-delay: 5s;
+                                      animation-timing-function: linear;
+                                      animation-iteration-count: 1;
+                                      animation-fill-mode: both;
+                                    }
+                                    @keyframes justfu4 {
+                                      from {display: block;}
+                                      to {display: none;}
+                                    
+                                    }  
+                                    .cdnonered{
+                                      fill: #ff0000;
+                                      stroke: #ff0000;
+                                      animation-name: justfu;
+                                      animation-duration: 0.4s;
+                                      animation-delay: 5s;
+                                      animation-iteration-count: 1;
+                                      animation-fill-mode: forwards;
+                                    }
+                                    @keyframes justfu {
+                                      from {fill: #ff0000;stroke: #ff0000;}
+                                      to {fill: #ffffff00; stroke: #ffffff00;}
+                                    
+                                    }    
+                                    .cdnoneyellow{
+                                      fill: #ffff00;
+                                      stroke: #ffff00;
+                                      animation-name: justfu2;
+                                      animation-duration: 0.4s;
+                                      animation-delay: 5s;
+                                      animation-iteration-count: 1;
+                                      animation-fill-mode: forwards;
+                                    }
+                                    @keyframes justfu2 {
+                                      from {fill: #ffff00;stroke: #ffff00;}
+                                      to {fill: #ffffff00; stroke: #ffffff00;}
+                                    
+                                    }  
+                                    .cdnonegreen{
+                                      fill: #00ff00;
+                                      stroke: #00ff00;
+                                      animation-name: justfu3;
+                                      animation-duration: 0.4s;
+                                      animation-delay: 5s;
+                                      animation-iteration-count: 1;
+                                      animation-fill-mode: forwards;
+                                    }
+                                    @keyframes justfu3 {
+                                      from {fill: #00ff00;stroke: #00ff00;}
+                                      to {fill: #ffffff00; stroke: #ffffff00;}
+                                    
+                                    }      
+
+/* ----------------about section-------------------- */
+
+.about{
   text-align: center;
   padding:3% 10% ;
 }
-.whatwedohead{
-    padding-top: 40px;
-    padding-bottom: 20px;
-    color: #1f286eff;
-    font-size: 45px;
-
+.col-lg-5{
+  width: 100% !important;
+}
+.aboutsubhead{
+    padding-top: 3%;
+    padding-bottom: 1%;
+    font-weight: 700;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 0px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.whatwedop{
-    font-size: 23px;
-    
-    color: rgb(158, 157, 157);
+.abouthead{
+  
+  font-weight: 900;
+  color: #1f286eff;
+  font-size: 40px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.whitecolor{
+  color: white;
+}
+.abouttext{
+  text-align: left;
+}
+.aboutp{
+    font-size: 17px;
+    line-height: 2;
+    color: white;
+    padding-top: 20px;
    
    
 }
-
-.quotes{
-    font-size: 30px;
-    color: #1f286eff;
-    font-weight: bold;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.bold{
+  font-weight: 800;
 }
-.processbg{
+/* -----------------about illustration----------------- */
+.techno{
+  width: auto;
+    height: auto;
+    max-width: 256px;
+}
+.wirefirst{
+  
+  stroke: white;
+  animation-name: wire1;
+  animation-duration: 1.2s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+@keyframes wire1 {
+  from {stroke: white;}
+  to {stroke: #1f286eff;}
+}
+.wiresec{
+  
+  stroke: white;
+  animation-name: wire2;
+  animation-duration: 1.2s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+@keyframes wire2 {
+  from {stroke: white;}
+  to {stroke: #1f286eff;}
+}
+ 
+.wirethird{
+  
+  stroke: white;
+  animation-name: wire3;
+  animation-duration: 0.6s;
+  animation-delay: 0.4s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+@keyframes wire3 {
+  from {stroke: white;}
+  to {stroke: #1f286eff;}
+}
+
+.wirefour{
+  
+  stroke: white;
+  animation-name: wire4;
+  animation-duration: 0.6s;
+  animation-delay: 0.4s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+@keyframes wire4 {
+  from {stroke: white;}
+  to {stroke: #1f286eff;}
+}
+
+
+.arrow{
+  animation: arrowd 10s infinite;
+  animation-delay: 0s ;
+  animation-timing-function: ease;                      
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+@keyframes arrowd {
+  0%{transform: translateY(0px);}
+  10% {transform: translateY(10px);}
+  20% {transform: translateY(0px);}
+  30% {transform: translateY(10px);}
+  40% {transform: translateY(0px);}
+  50% {transform: translateY(10px);}
+  60% {transform: translateY(0px);}
+  70% {transform: translateY(10px);}
+  80% {transform: translateY(0px);}
+  90% {transform: translateY(10px);}
+  100% {transform: translateY(0px);}
+    }
+
+
+
+
+.pointer {
+  animation: rotate 4s ease infinite;
+  animation-delay: 0s;
+  transform-origin: 50px 75px;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  }
+
+
+@keyframes rotate {
+0%{transform: rotate(0deg);}
+  50% {transform: rotate(130deg);}
+  100%{transform: rotate(130deg);}
+}
+
+.bigstar{
+  
+  stroke: #ffffff00;
+  fill: #ffffff00;
+  animation-name: star;
+  animation-duration: 4s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+@keyframes star {
+  0% {stroke: #ffffff00; fill: #ffffff00;}
+  50% {stroke: #ffffff00; fill: #ffffff00;}
+   60%{stroke: white; fill: white;}
+   100%{stroke: white; fill: white;}
+}
+
+.main-carousel{
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+.carousel-cell{
+  width: 100%;
+}
+
+.coin{
+  animation: coins 2s infinite;
+  animation-delay: 0s ;
+  animation-timing-function: ease-in;                      
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+@keyframes coins {
+  0%{transform: translateY(0px);}
+  70%{transform: translateY(60px);}
+  100%{transform: translateY(60px);}
+  
+    }
+
+
+/* ------------------services section ----------------- */
+.servicesbg{
   padding: 3% 10%;
 }
-.processhead{
-    
-    padding-bottom: 20px;
-    color: #1f286eff;
-    font-size: 45px;
-    
+.servicehead{
+  font-weight: 900;
+  color: #1f286eff;
+  font-size: 40px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
 
+  .servicesubhead{
+    padding-top: 1%;
+    padding-bottom: 3%;
+    font-weight: 700;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 0px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.services_illus{
+  width: auto;
+    height: auto;
+  max-width: 170px;
+}
 .row2{
   
   text-align: center;
   margin: 0;
   
 }
-
-.cards{
-  background-color: #1f286eff;
-  padding-left: 2%;
-  padding-right: 2%;
-  border-radius: 20px;
+.servcardhead{
+  font-weight: 700;
+  color: #1f286eff;
+  font-size:28px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.cardp{
-  color: rgb(196, 195, 195);
-  font-size: 15px;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-top:10px;
-  padding-bottom:40px;
-}
-.cardhead{
-  color: white;
-  padding-top:60px;
-  padding-bottom: 20px;
-  font-weight: 200;
+.servcardp{
+  font-size: 17px;
+    line-height: 2;
+    color: white;
+    padding-top: 20px;
 }
 
-.servhead{
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: white;
-  font-size: 45px;
+.servcolumn{
+  padding-top: 3%;
 }
 
-.servicessection{
-  background-color: rgb(18, 23, 63);
-  text-align: left;
-  padding-left: 7%;
-  padding-right: 7%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  
-}
-.bgcolor{
-  background-color: rgb(18, 23, 63);
-}
-.codeimage{
-  width: 100%;
-  height: 440.5px;
-  background-image: url('image1.webp');
-  background-size: cover;
-  padding: 0;
-}
 
-.codeimage2{
-  width: 100%;
-  height: 440.5px;
-  background-image: url('image2.webp');
-  background-size: cover;
-  padding: 0;
-}
-.row3{
-  width: 100%;
-  margin-right: 0;
-  margin-left: 0;
-}
-li{
-  font-size: 15px;
-  color: rgb(196, 195, 195);
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-li::marker{
-  color: rgb(196, 195, 195);;
-  font-size: 25px;
-}
 
+/* -----------------work section------------------- */
+.workbg{
+  padding: 3% 10%;
+}
 
 .workhead{
-  padding-top: 70px;
-  padding-bottom: 40px;
-  margin-top: 30px;
+  font-weight: 900;
   color: #1f286eff;
-  font-size: 45px;
+  font-size: 40px;
+  padding-top: 5%;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.image{
-  width: 70%;
-  margin-top: 20px;
-  margin-bottom: 20px;
+.worksubhead{
+  padding-top: 1%;
+    padding-bottom: 3%;
+    font-weight: 700;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 0px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.fa{
-  font-size: 50px;
-  color: rgb(196, 195, 195);
-  padding: 10px;
+
+.workcard{
+  box-shadow: 6px 6px #7e94f9ff, 12px 12px #c3cefcff;
+  background-color: white;
+  border-radius: 20px;
+  
+  margin-left: 5%;
+  margin-left: 5%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  
+  
 }
-.fa:hover{
+.workcard:hover{
+cursor: pointer;
+
+box-shadow: 6px 6px #c3cefcff, 12px 12px #7e94f9ff;
+}
+
+.workp{
+  margin: 0px;
+  padding-top: 5%;
+  padding-bottom: 7%;
+  font-size: 17px;
+    line-height: 2;
+    color: #1f286eff;
+    padding-top: 20px;
+    font-weight: 700;
+}
+.worklogo{
+  max-width: 140px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.reviewedlogo{
+  
+  margin: 7%;
+  max-width: 185px;
+}
+.gsclogo{
+  max-width: 105px;
+}
+.mollys{
+  max-width: 190px;
+}
+
+.viewworkbutton{
+  background-color: #748bfaff;
+}
+.viewworkbutton:hover{
+  background-color: white;
+}
+
+/* ------------------review section------------------ */
+.reviewhead{
+  font-weight: 900;
+  color: #1f286eff;
+  font-size: 40px;
+  padding-top: 5%;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.reviewsubhead{
+  padding-top: 1%;
+    padding-bottom: 0%;
+    font-weight: 700;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 0px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.quotes {
+
+ position: relative;
+bottom: 20px;
+
+max-width: 70px;
+}
+.reviewcarousel{
+  padding-top: 0%;
+}
+.reviewp{
+  font-size: 17px;
+    line-height: 2;
+    color: white;
+    padding-top: 3%;
+}
+
+.reviewstars{
+  font-size:2rem;
+  color:white;
+}
+
+.clientname{
+  font-size: 17px;
+    
+    color: white;
+    font-weight: 500;
+    
+}
+
+/* --------------------blogs section-------------------- */
+
+.bloghead{
+  font-weight: 900;
+  color: #1f286eff;
+  font-size: 40px;
+  padding-top: 5%;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.blogsubhead{
+  padding-top: 1%;
+    padding-bottom: 0%;
+    font-weight: 700;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 0px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.blog1img{
+  border-radius: 15px;
+ width: 95%;
+  
+  box-shadow: 6px 6px #7e94f9ff, 12px 12px #c3cefcff;
+}
+
+.blogicons{
   color: white;
+
 }
-.footerp{
-  color: rgb(196, 195, 195);
-  margin-bottom: 0;
+.blogp{
+  font-size: 17px;
+    line-height: 1.8;
+    color: white;
+    
 }
-.content{
-  padding-top: 20px;
-  padding-bottom: 20px;
+.blogphead{
+  font-size: 19px;
+    
+    color: white;
+    font-weight: 700;
 }
+.blogleft{
+  text-align: left;
+}
+
+.blogcaraousel{
+  padding-top: 2%;
+  padding-bottom: 1%;
+}
+
+
+
+
+
+
+/* ----------------------footer section---------------- */
+
+
+
 .footer{
   background-color: #4a69f8ff;
 }
 
+.colfooter{
+  text-align: left;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.footerp{
+  font-size: 16px;
+    line-height: 1.8;
+    color: white;
+    font-weight: 400;
+}
 
-
-.contacthead{
-  color: white;
+.footerintro{
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.quicklinkshead{
   
-  
+    font-weight: 700;
+    color: white;
+    font-size: 17px;
+    
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.quicklinks{
+  font-size: 16px;
+  line-height: 1.2;
+  color: white;
+  font-weight: 400;
+  margin-bottom: 1px !important;
+}
+
+.qla{
+  font-size: 16px;
+  line-height: 1.8;
+  color: white;
+  font-weight: 400;
+}
+
+.qla:hover{
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgb(186, 196, 248);
+  font-weight: 400;
+  text-decoration: none;
+}
+.sociallink{
+  color: white;
+  font-size: 19px !important;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.sociallink:hover{
+cursor: pointer;
+color: rgb(186, 196, 248) !important;
 }
 
 .contactp{
-  
-    font-size: 18px;
-    margin-bottom: 0;
-    
-    color: rgb(158, 157, 157);
-   
-   
-
+  padding-top: 9px;
+  padding-bottom: 9px;
 }
 
-.contactsection{
-  background-color: #1f286eff;
-  padding-bottom: 30px;
+.copyp{
+  color: white;
+  margin-top:4px;
+  margin-bottom: 4px;
 }
+
+
+
   @media (max-width: 992px) {
 
-    #title {
-      text-align: center;
-    }
+   
     
     .col-lg-7{
         padding-right: 15px;
@@ -295,23 +923,145 @@ li::marker{
     }
 
     .col-lg-5{
-        padding-top: 50px;
-        padding-bottom: 30px;
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
-    .title-image {
+    .logo {
       position: static;
-      width: 17em;
+      width: 9rem;
       
     }
     .col-xs-12 {
       display: flex;
       flex-direction: column-reverse;
     }
+    .navbar {
+      padding: 0 0 1.7rem;
+  }
+    .big-heading {
+       font-size: 1.5rem;
+      }
 
-    .contactp{
-      font-size: 15px;
-      padding-left: 5%;
-      padding-right: 5%;
+      .intro{
+      padding-top: 15px;
+        line-height: 1.6;
+        font-size: 0.9rem;
     }
 
+    .download-button {
+      font-size: 1rem;
+      
+    }
+  .computer_illustration{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+    
+  .socials{
+    display: none;
+  }
+
+  .aboutsubhead{
+    padding-top: 20px;
+    
+    font-size: 1rem;
+    margin-bottom: 0px;
+
+}
+
+
+.abouthead{
+  
+  font-weight: 900;
+  
+  font-size: 1.5rem;
+
+}
+.aboutp{
+  font-size: 0.9rem;
+  line-height: 1.7;
+  
+  padding-top: 20px;
+ 
+ 
+}
+.techno{
+  max-width: 150px;
+}
+
+.servicehead{
+  font-size: 1.5rem;
+  padding-top: 50px;
+}
+.servicesubhead{
+  font-size: 0.9rem;
+}
+.servcardhead{
+  font-size: 1.4rem;
+}
+.servcardp{
+  font-size: 0.9rem;
+}
+.workhead{
+  font-size: 1.6rem;
+  padding-top: 30px;
+}
+.worksubhead{
+  font-size: 1rem;
+}
+.workcard{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 3px 3px #7e94f9ff, 6px 6px #c3cefcff;
+}
+.reviewhead{
+  font-size: 1.6rem;
+  padding-top: 50px;
+}
+.reviewsubhead{
+  font-size: 1rem;
+}
+.reviewp{
+padding-top: 26px;
+font-size: 1rem;
+}
+.quotes{
+  max-width: 50px;
+}
+.clientname{
+  font-size: 1rem;
+}
+.bloghead{
+  font-size: 1.6rem;
+  padding-top: 50px;
+}
+.blogsubhead{
+  font-size: 1rem;
+}
+.blog1img{
+  max-width: 350px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 3px 3px #7e94f9ff, 6px 6px #c3cefcff;
+}
+.blogp{
+  font-size: 1rem;
+}
+.blogphead{
+  font-size: 1.2rem;
+}
+.blogcaraousel{
+  
+  margin-bottom: 15px;
+}
+.footerbg{
+  margin-top: 40px;
+  padding-top: 30px;
+}
+.colfooter{
+  margin-bottom: 20px;
+}
+.copyp{
+  font-size: 0.8rem;
+}
   }
